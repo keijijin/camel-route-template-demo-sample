@@ -38,10 +38,10 @@ Maven reactor: route-template-demo
 │       parameters: label, path
 ├── app-a/   (Spring Boot executable JAR)
 │   ├── Application.java  → route-a / APP-A / /hello
-│   └── application.properties  → server.port=8081
+│   └── application.yaml  → server:\n      port: 8081
 └── app-b/   (Spring Boot executable JAR)
     ├── Application.java  → route-b / APP-B / /hello
-    └── application.properties  → server.port=8082
+    └── application.yaml  → server:\n      port: 8082
 
 JVM-A: app-a.jar + common → CamelContext-A → route-a
 JVM-B: app-b.jar + common → CamelContext-B → route-b
